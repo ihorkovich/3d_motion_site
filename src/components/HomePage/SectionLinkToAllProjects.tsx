@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { pageConfig } from "../../config/page.config";
-
+import { motion } from "framer-motion";
+import { sectionLinkToAllProjectsAnimation } from "../../lib/animations";
 const SectionLinkToAllProjects = () => {
   return (
-    <section className="flex flex-col items-center gap-6 px-5 py-24 text-center text-white sm:py-32 md:py-40 lg:px-10 lg:py-48">
+    <motion.section
+      {...sectionLinkToAllProjectsAnimation}
+      className="flex flex-col items-center gap-6 px-5 py-24 text-center text-white sm:py-32 md:py-40 lg:px-10 lg:py-48"
+    >
       <p className="max-w-[37rem] text-xs md:text-left md:text-base 2xl:text-lg">
         DISCOVER THE FULL SPECTRUM OF OUR CREATIVE PORTFOLIO AND EXPLORE THE
         UNIQUE PROJECTS WE'VE BROUGHT TO LIFE.
@@ -19,7 +23,7 @@ const SectionLinkToAllProjects = () => {
           VIEW ALL PROJECTS
         </NavLink>
       </button>
-    </section>
+    </motion.section>
   );
 };
 
