@@ -4,6 +4,13 @@ import {
   ProjectTitleClasses,
 } from "../../config/projectStylesHomePage.config";
 import Loader from "../Loader";
+import { motion } from "framer-motion";
+import {
+  featuredProjectsLineAnimation,
+  featuredProjectsTitleAnimation,
+  projectDescriptionAnimation,
+  projectLineAnimation,
+} from "../../lib/animations";
 
 type Project = {
   id: number;
@@ -36,26 +43,35 @@ const SectionProjectsList = () => {
 
   return (
     <section className="px-5 text-xs text-white lg:px-10 lg:text-sm">
-      <div className="border-b border-white pb-3">
-        <p>FEATURED PROJECTS</p>
+      <div>
+        <motion.p {...featuredProjectsTitleAnimation} className="pb-3">
+          FEATURED PROJECTS
+        </motion.p>
+        <motion.hr
+          className="h-[0.0625rem] bg-white"
+          {...featuredProjectsLineAnimation}
+        />
       </div>
-      <div className="lg:gap-17 mt-6 flex flex-col gap-4 md:gap-10">
+      <div className="mt-6 flex flex-col gap-4 md:gap-10 lg:gap-17">
         {data?.map((project, i) => (
           <div
             className="flex flex-col gap-6 md:grid md:grid-cols-12 md:gap-5"
             key={project.id}
           >
             <img
-              src={project.video}
+              src="images/5.png" //{project.video}
               alt={project.title}
               className={`${ProjectImageClasses[i]}`}
               loading="lazy"
             />
             <div
-              className={`${ProjectTitleClasses[i]} xl:gap-18 flex flex-col gap-4 md:justify-end md:gap-6 lg:gap-12`}
+              className={`${ProjectTitleClasses[i]} flex flex-col gap-4 md:justify-end md:gap-6 lg:gap-12 xl:gap-18`}
             >
-              <hr className="border-t border-white" />
-              <div>
+              <motion.hr
+                className="h-[0.0625rem] bg-white"
+                {...projectLineAnimation(i)}
+              />
+              <motion.div {...projectDescriptionAnimation}>
                 <div>
                   <p className="hidden md:block md:font-semibold">PROJECT</p>
                   <p>{project.title.toUpperCase()}</p>
@@ -64,7 +80,7 @@ const SectionProjectsList = () => {
                   <p className="hidden md:block md:font-semibold">CATEGORY</p>
                   <p>{project.category.toUpperCase()}</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         ))}

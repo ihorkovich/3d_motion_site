@@ -37,7 +37,7 @@ const NavBar = () => {
           <button aria-label="Open menu">MENU</button>
         </div>
 
-        <div className="hidden text-base text-white md:block">
+        <div className="hidden text-base text-white duration-300 hover:cursor-pointer hover:text-yellow md:block">
           <p>{import.meta.env.VITE_THEM_EMAIL.toUpperCase()}</p>
         </div>
       </div>

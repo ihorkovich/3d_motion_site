@@ -6,13 +6,13 @@ const HeaderSubtitle = () => {
       </h2>
       <div className="flex flex-col items-center gap-2 leading-3 md:leading-4">
         <div className="flex items-center justify-between gap-2 text-2xs xsm:gap-5 sm:gap-6 md:gap-9 md:text-xs lg:gap-10">
-          <p className="">EXPLAINER VIDEOS</p>
-          <p className="">BRANDING VIDEOS</p>
-          <p className="">SHORT FILMS</p>
+          <p>EXPLAINER VIDEOS</p>
+          <p>BRANDING VIDEOS</p>
+          <p>SHORT FILMS</p>
         </div>
         <div className="flex items-center justify-center gap-2 text-2xs xsm:gap-6 sm:gap-9 md:gap-14 md:text-xs lg:gap-20">
-          <p className="">PRODUCT DESIGN VISUAL</p>
-          <p className="">MUSIC VIDEOS</p>
+          <p>PRODUCT DESIGN VISUAL</p>
+          <p>MUSIC VIDEOS</p>
         </div>
       </div>
     </div>
