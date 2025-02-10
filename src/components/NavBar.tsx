@@ -1,8 +1,11 @@
 import "../styles/animations.css";
 import { NavLink } from "react-router-dom";
 import { pageConfig } from "../config/page.config";
+import { useMenu } from "../contexts/mobileMenuContext";
 
 const NavBar = () => {
+  const { toggleMenu } = useMenu();
+
   const navItems = [
     { label: "ABOUT", path: pageConfig.about },
     { label: "PROJECTS", path: pageConfig.projects },
@@ -34,7 +37,9 @@ const NavBar = () => {
         </ul>
 
         <div className="text-yellow md:hidden">
-          <button aria-label="Open menu">MENU</button>
+          <button aria-label="Open menu" onClick={toggleMenu}>
+            MENU
+          </button>
         </div>
 
         <div className="hidden text-base text-white duration-300 hover:cursor-pointer hover:text-yellow md:block">

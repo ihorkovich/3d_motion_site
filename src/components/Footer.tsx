@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { pageConfig } from "../config/page.config";
 import FooterAppeal from "./Footer/FooterAppeal";
 import FooterSocialLinks from "./Footer/FooterSocialLinks";
+import EmailButton from "./EmailButton";
 import { motion } from "framer-motion";
 import {
   footerAppearanceAnimation,
@@ -50,14 +51,7 @@ const Footer = () => {
 
         <div className="mb-8 hidden items-center justify-between md:flex">
           <FooterAppeal />
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=THEMSTUDIO2024@GMAIL.COM"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm duration-300 hover:cursor-pointer hover:text-yellow"
-          >
-            {import.meta.env.VITE_THEM_EMAIL.toUpperCase()}
-          </a>
+          <EmailButton />
         </div>
 
         <hr className="hidden border-t border-white md:block" />

@@ -58,3 +58,27 @@ export const footerAppearanceAnimation = {
   transition: { duration: 1, ease: "easeInOut" },
   viewport: { once: true, amount: 0.15 },
 };
+
+//MOBILE MENU
+export const menuVariants = {
+  open: {
+    x: 0,
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
+  closed: {
+    x: "100%",
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
+};
+
+export const menuNavLinks = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.75, ease: "easeInOut" },
+};
+
+export const menuSocialLinks = {
+  initial: { opacity: 0, y: 25 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.75, ease: "easeInOut" },
+};

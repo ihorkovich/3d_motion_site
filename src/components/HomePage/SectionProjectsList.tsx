@@ -59,7 +59,7 @@ const SectionProjectsList = () => {
             key={project.id}
           >
             <img
-              src="images/5.png" //{project.video}
+              src="images/4.png"
               alt={project.title}
               className={`${ProjectImageClasses[i]}`}
               loading="lazy"
