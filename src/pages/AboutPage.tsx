@@ -1,5 +1,14 @@
+import NavBarMobileMenu from "../components/NavBar/NavBarMobileMenu";
+import HeaderAboutPage from "../components/AboutPage/HeaderAboutPage";
+
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <>
+      <HeaderAboutPage />
+
+      <NavBarMobileMenu />
+    </>
+  );
 };
 
 export default AboutPage;

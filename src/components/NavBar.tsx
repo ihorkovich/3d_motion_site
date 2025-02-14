@@ -1,5 +1,5 @@
 import "../styles/animations.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { pageConfig } from "../config/page.config";
 import { useMenu } from "../contexts/mobileMenuContext";
 
@@ -15,9 +15,9 @@ const NavBar = () => {
   return (
     <nav className="fixed z-50 h-navbar_mob w-full px-5 lg:h-navbar_desk lg:px-10">
       <div className="flex h-full w-full items-center justify-between font-host text-base">
-        <div className="font-gothic text-white">
-          <p>THEM</p>
-        </div>
+        <Link to={pageConfig.home} className="font-gothic text-white">
+          THEM
+        </Link>
 
         <ul className="hidden text-white md:flex md:items-center md:justify-between md:gap-4">
           {navItems.map(({ label, path }) => (

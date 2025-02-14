@@ -21,7 +21,7 @@ const NavBarMobileMenu = () => {
           initial="closed"
           animate="open"
           exit="closed"
-          className={`fixed left-0 top-0 h-screen w-full bg-yellow px-5 md:hidden`}
+          className={`fixed left-0 top-0 z-[100] h-screen w-full bg-yellow px-5 md:hidden`}
         >
           <div className="just flex h-navbar_mob items-center justify-between">
             <p className="font-gothic">THEM</p>

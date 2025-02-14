@@ -82,3 +82,25 @@ export const menuSocialLinks = {
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.75, ease: "easeInOut" },
 };
+
+//ABOUT PAGE
+export const aboutHeaderLogo = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true },
+};
+
+export const aboutHeaderDescription1 = {
+  initial: { opacity: 0, y: 150 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true },
+};
+
+export const aboutHeaderDescription2 = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true, amount: 0.1 },
+};
