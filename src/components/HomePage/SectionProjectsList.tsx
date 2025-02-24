@@ -6,11 +6,10 @@ import {
 import Loader from "../Loader";
 import { motion } from "framer-motion";
 import {
-  featuredProjectsLineAnimation,
-  featuredProjectsTitleAnimation,
   projectDescriptionAnimation,
   projectLineAnimation,
 } from "../../lib/animations";
+import SectionTitle from "../SectionTitle";
 
 type Project = {
   id: number;
@@ -22,7 +21,7 @@ type Project = {
 
 const SectionProjectsList = () => {
   const { data, isLoading, error } = useFetch<Project[]>(
-    `http://localhost:3000/api/v1/projects?limit=6&offset=1`,
+    `http://localhost:3000/api/v1/projects?limit=${import.meta.env.VITE_THEM_MAIN_PAGE_PROJECTS_QT}&offset=1`,
   );
 
   const reloadPageHandler = () => {
@@ -43,15 +42,7 @@ const SectionProjectsList = () => {
 
   return (
     <section className="px-5 text-xs text-white lg:px-10 lg:text-sm">
-      <div>
-        <motion.p {...featuredProjectsTitleAnimation} className="pb-3">
-          FEATURED PROJECTS
-        </motion.p>
-        <motion.hr
-          className="h-[0.0625rem] bg-white"
-          {...featuredProjectsLineAnimation}
-        />
-      </div>
+      <SectionTitle title={"FEATURED PROJECTS"} />
       <div className="mt-6 flex flex-col gap-4 md:gap-10 lg:gap-17">
         {data?.map((project, i) => (
           <div
