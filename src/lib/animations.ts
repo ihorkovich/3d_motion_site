@@ -13,19 +13,6 @@ export const sectionLinkToAllProjectsAnimation = {
   viewport: { once: true, amount: 0.35 },
 };
 
-export const featuredProjectsTitleAnimation = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1 },
-  transition: { duration: 0.5, ease: "easeInOut" },
-};
-
-export const featuredProjectsLineAnimation = {
-  initial: { width: 0 },
-  whileInView: { width: "100%" },
-  transition: { duration: 1, ease: "easeInOut" },
-  viewport: { once: true, amount: 0.35 },
-};
-
 export const projectLineAnimation = (index: number) => ({
   initial: { scaleX: 0 },
   whileInView: { scaleX: 1 },
@@ -103,4 +90,19 @@ export const aboutHeaderDescription2 = {
   whileInView: { opacity: 1, y: 0 },
   transition: { duration: 1, ease: "easeInOut" },
   viewport: { once: true, amount: 0.1 },
+};
+
+//SECTION
+export const sectionTitleAnimation = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.5, ease: "easeInOut" },
+  viewport: { once: true },
+};
+
+export const sectionTitleLineAnimation = {
+  initial: { width: 0 },
+  whileInView: { width: "100%" },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true },
 };
