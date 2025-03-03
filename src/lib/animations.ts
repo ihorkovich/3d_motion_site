@@ -92,6 +92,10 @@ export const aboutHeaderDescription2 = {
   viewport: { once: true, amount: 0.1 },
 };
 
+//Additional Info Section
+
+export const additionalInfoSection = {...aboutHeaderDescription1}
+
 //SECTION
 export const sectionTitleAnimation = {
   initial: { opacity: 0 },
