@@ -1,7 +1,7 @@
 import "../../styles/animations.css";
 import { useMenu } from "../../contexts/mobileMenuContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { navItems, socialLinks } from "../../config/link.config";
 import EmailButton from "../EmailButton";
 import {
@@ -24,7 +24,9 @@ const NavBarMobileMenu = () => {
           className={`fixed left-0 top-0 z-[100] h-screen w-full bg-yellow px-5 md:hidden`}
         >
           <div className="just flex h-navbar_mob items-center justify-between">
-            <p className="font-gothic">THEM</p>
+            <Link to="/" onClick={toggleMenu}>
+              <p className="font-gothic">THEM</p>
+            </Link>
 
             <button
               aria-label="Close menu"
@@ -41,7 +43,7 @@ const NavBarMobileMenu = () => {
               {...menuNavLinks}
             >
               {navItems.map(({ label, path }) => (
-                <li key={label}>
+                <li key={label} onClick={toggleMenu}>
                   <NavLink
                     to={path}
                     className={({ isActive }) =>
