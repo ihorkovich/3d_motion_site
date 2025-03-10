@@ -92,9 +92,12 @@ export const aboutHeaderDescription2 = {
   viewport: { once: true, amount: 0.1 },
 };
 
-//Additional Info Section
-
-export const additionalInfoSection = {...aboutHeaderDescription1}
+export const sectionAdditionalInfo = {
+  initial: { opacity: 0, y: 120 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true, amount: 0.45 },
+};
 
 //SECTION
 export const sectionTitleAnimation = {
@@ -109,4 +112,12 @@ export const sectionTitleLineAnimation = {
   whileInView: { width: "100%" },
   transition: { duration: 1, ease: "easeInOut" },
   viewport: { once: true },
+};
+
+//PAGE TITLE ANIMATION
+export const pageTitleAnimation = {
+  initial: { y: 60, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { duration: 0.75, ease: "easeInOut" },
+  viewport: { once: true, amount: 0.35 },
 };
