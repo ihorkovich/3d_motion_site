@@ -99,6 +99,24 @@ export const sectionAdditionalInfo = {
   viewport: { once: true, amount: 0.45 },
 };
 
+export const projectAppearance = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true },
+};
+
+export const aboutSectionProjectLineAnimation = (index: number) => ({
+  initial: { scaleX: 0 },
+  whileInView: { scaleX: 1 },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true, amount: 0.35 },
+  style: {
+    transformOrigin:
+      window.innerWidth < 768 ? "left" : index % 2 === 0 ? "right" : "left",
+  },
+});
+
 //SECTION
 export const sectionTitleAnimation = {
   initial: { opacity: 0 },
@@ -116,8 +134,8 @@ export const sectionTitleLineAnimation = {
 
 //PAGE TITLE ANIMATION
 export const pageTitleAnimation = {
-  initial: { y: 60, opacity: 0 },
+  initial: { y: 75, opacity: 0 },
   whileInView: { y: 0, opacity: 1 },
-  transition: { duration: 0.75, ease: "easeInOut" },
+  transition: { duration: 1, ease: "easeInOut" },
   viewport: { once: true, amount: 0.35 },
 };

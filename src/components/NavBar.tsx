@@ -43,7 +43,13 @@ const NavBar = () => {
         </div>
 
         <div className="hidden text-base text-white duration-300 hover:cursor-pointer hover:text-yellow md:block">
-          <p>{import.meta.env.VITE_THEM_EMAIL.toUpperCase()}</p>
+          <a
+            href={import.meta.env.VITE_THEM_EMAIL_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {import.meta.env.VITE_THEM_EMAIL.toUpperCase()}
+          </a>
         </div>
       </div>
     </nav>

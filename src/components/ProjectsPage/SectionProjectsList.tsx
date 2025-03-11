@@ -1,16 +1,16 @@
 import useFetch from "../../hooks/useFetch";
+import Loader from "../Loader";
+import { Project } from "../../types/project";
 import {
   ProjectImageClasses,
   ProjectTitleClasses,
-} from "../../config/projectStylesHomePage.config";
-import Loader from "../Loader";
-import { motion } from "framer-motion";
+} from "../../config/projectsStylesProjectsPage.config";
 import {
+  aboutSectionProjectLineAnimation,
+  projectAppearance,
   projectDescriptionAnimation,
-  projectLineAnimation,
 } from "../../lib/animations";
-import SectionTitle from "../SectionTitle";
-import { Project } from "../../types/project";
+import { motion } from "framer-motion";
 
 const SectionProjectsList = () => {
   const { data, isLoading, error } = useFetch<Project[]>(
@@ -34,26 +34,26 @@ const SectionProjectsList = () => {
     );
 
   return (
-    <section className="px-5 text-xs text-white lg:px-10 lg:text-sm">
-      <SectionTitle title={"FEATURED PROJECTS"} />
-      <div className="mt-6 flex flex-col gap-4 md:gap-10 lg:gap-17">
-        {data?.concat(data).map((project, i) => (
+    <section className="mb-24 mt-10 flex flex-col gap-4 px-5 text-white md:mb-40 md:mt-20 md:gap-10 lg:gap-17 lg:px-10">
+      {data &&
+        data?.concat(data.slice(0, 2))?.map((project, i) => (
           <div
             className="flex flex-col gap-6 md:grid md:grid-cols-12 md:gap-5"
             key={project.id}
           >
-            <img
+            <motion.img
               src="images/4.png"
               alt={project.title}
               className={`${ProjectImageClasses[i]}`}
               loading="lazy"
+              {...projectAppearance}
             />
             <div
               className={`${ProjectTitleClasses[i]} flex flex-col gap-4 md:justify-end md:gap-6 lg:gap-12 xl:gap-18`}
             >
               <motion.hr
                 className="h-[0.0625rem] bg-white"
-                {...projectLineAnimation(i)}
+                {...aboutSectionProjectLineAnimation(i)}
               />
               <motion.div {...projectDescriptionAnimation}>
                 <div>
@@ -68,7 +68,6 @@ const SectionProjectsList = () => {
             </div>
           </div>
         ))}
-      </div>
     </section>
   );
 };
