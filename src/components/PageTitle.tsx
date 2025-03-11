@@ -8,7 +8,7 @@ type PageTitleProps = {
 const PageTitle = ({ title, subtitle }: PageTitleProps) => {
   return (
     <motion.div
-      className="px-5 pt-20 text-left text-white lg:px-10"
+      className="px-5 pt-20 text-left text-white lg:px-10 lg:pt-28"
       {...pageTitleAnimation}
     >
       <h3 className="font-host text-xs md:text-sm">{subtitle.toUpperCase()}</h3>
