@@ -15,11 +15,11 @@ const NavBar = () => {
   return (
     <nav className="fixed z-50 h-navbar_mob w-full px-5 lg:h-navbar_desk lg:px-10">
       <div className="flex h-full w-full items-center justify-between font-host text-base">
-        <Link to={pageConfig.home} className="font-gothic text-white">
+        <Link to={pageConfig.home} className="font-gothic">
           THEM
         </Link>
 
-        <ul className="hidden text-white md:flex md:items-center md:justify-between md:gap-4">
+        <ul className="hidden md:flex md:items-center md:justify-between md:gap-4">
           {navItems.map(({ label, path }) => (
             <li key={label}>
               <NavLink
@@ -42,7 +42,7 @@ const NavBar = () => {
           </button>
         </div>
 
-        <div className="hidden text-base text-white duration-300 hover:cursor-pointer hover:text-yellow md:block">
+        <div className="hidden text-base duration-300 hover:cursor-pointer hover:text-yellow md:block">
           <a
             href={import.meta.env.VITE_THEM_EMAIL_LINK}
             target="_blank"

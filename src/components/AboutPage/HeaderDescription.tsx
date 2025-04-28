@@ -7,7 +7,7 @@ import {
 
 const HeaderDescription = () => {
   return (
-    <div className="flex flex-col justify-center gap-18 px-5 font-host text-lg text-white md:[word-spacing:0.125rem] lg:px-10 lg:text-3xl lg:leading-[3.125rem] xl:text-4xl">
+    <div className="flex flex-col justify-center gap-18 px-5 font-host text-lg md:[word-spacing:0.125rem] lg:px-10 lg:text-3xl lg:leading-[3.125rem] xl:text-4xl">
       <div className="flex flex-col gap-18 md:flex-row md:justify-between">
         <motion.h2 {...aboutHeaderLogo} className="text-xs md:text-sm">
           ABOUT OUR STUDIO

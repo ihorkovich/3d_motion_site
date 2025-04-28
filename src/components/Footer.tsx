@@ -24,7 +24,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mb-11 px-5 text-white lg:px-10">
+    <footer className="mb-11 px-5 lg:px-10">
       <motion.hr
         className="mb-11 h-[0.0625rem] bg-white md:hidden"
         {...footerLineAnimation}

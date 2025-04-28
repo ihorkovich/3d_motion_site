@@ -25,7 +25,7 @@ const SectionProjectsList = () => {
 
   if (error)
     return (
-      <section className="flex flex-col items-center justify-center gap-4 px-5 text-sm text-white lg:px-10">
+      <section className="flex flex-col items-center justify-center gap-4 px-5 text-sm lg:px-10">
         <p className="text-center font-semibold">
           AN UNKNOWN ERROR OCCURRED DURING FETCHING PROJECTS
         </p>
@@ -34,10 +34,10 @@ const SectionProjectsList = () => {
     );
 
   return (
-    <section className="px-5 text-xs text-white lg:px-10 lg:text-sm">
+    <section className="px-5 text-xs lg:px-10 lg:text-sm">
       <SectionTitle title={"FEATURED PROJECTS"} />
       <div className="mt-6 flex flex-col gap-4 md:gap-10 lg:gap-17">
-        {data?.concat(data).map((project, i) => (
+        {data?.map((project, i) => (
           <div
             className="flex flex-col gap-6 md:grid md:grid-cols-12 md:gap-5"
             key={project.id}
