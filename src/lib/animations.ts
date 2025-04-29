@@ -139,3 +139,19 @@ export const pageTitleAnimation = {
   transition: { duration: 1, ease: "easeInOut" },
   viewport: { once: true, amount: 0.35 },
 };
+
+//PAGE CONTACTS ANIMATION
+export const contactsPageAnimation = {
+  initial: { y: 25, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { duration: 0.75, ease: "easeInOut" },
+  viewport: { once: true, amount: 0.35 },
+};
+
+//PAGE CONTACTS LINE ANIMATION
+export const contactsPageLineAnimation = {
+  initial: { width: 0 },
+  whileInView: { width: "100%" },
+  transition: { duration: 0.75, ease: "easeInOut" },
+  viewport: { once: true },
+};

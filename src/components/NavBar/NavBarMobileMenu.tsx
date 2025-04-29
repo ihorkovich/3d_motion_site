@@ -23,7 +23,7 @@ const NavBarMobileMenu = () => {
           exit="closed"
           className={`fixed left-0 top-0 z-[100] h-screen w-full bg-yellow px-5 md:hidden`}
         >
-          <div className="just flex h-navbar_mob items-center justify-between">
+          <div className="just flex h-navbar_mob items-center justify-between text-black">
             <Link to="/" onClick={toggleMenu}>
               <p className="font-gothic">THEM</p>
             </Link>
@@ -47,7 +47,7 @@ const NavBarMobileMenu = () => {
                   <NavLink
                     to={path}
                     className={({ isActive }) =>
-                      `nav-link relative overflow-hidden text-[2.75rem] leading-[3.25rem] after:bg-black sm:text-5xl sm:leading-[3.5rem] ${
+                      `nav-link relative overflow-hidden text-[2.75rem] leading-[3.25rem] text-black after:bg-black sm:text-5xl sm:leading-[3.5rem] ${
                         isActive ? "selected-nav-link" : ""
                       }`
                     }
@@ -66,7 +66,7 @@ const NavBarMobileMenu = () => {
             <EmailButton />
             <ul className="flex flex-col items-end gap-1 font-host text-sm">
               {socialLinks.slice(0, 2).map(({ label, link }) => (
-                <li key={label}>
+                <li key={label} className="text-black">
                   <a
                     href={link}
                     target="_blank"

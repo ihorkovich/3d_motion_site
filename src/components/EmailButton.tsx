@@ -1,6 +1,6 @@
 const EmailButton = () => {
   return (
-    <button>
+    <button className="duration-300 hover:text-yellow">
       <a
         href={import.meta.env.VITE_THEM_EMAIL_LINK}
         target="_blank"

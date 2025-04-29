@@ -5,7 +5,7 @@ const HeaderLogo = () => {
   return (
     <motion.h1
       {...aboutHeaderLogo}
-      className="flex w-full select-none items-center justify-between px-5 pt-20 font-gothic leading-none text-white [font-size:_clamp(18vw,19vw,21vw)] xsm:[font-size:_clamp(10vw,20vw,40vw)] sm:[font-size:_clamp(10vw,20.5vw,40vw)] lg:px-10"
+      className="flex w-full select-none items-center justify-between px-5 pt-20 font-gothic leading-none [font-size:_clamp(18vw,19vw,21vw)] xsm:[font-size:_clamp(10vw,20vw,40vw)] sm:[font-size:_clamp(10vw,20.5vw,40vw)] lg:px-10"
     >
       <span className="block">S</span>
       <span className="block">T</span>

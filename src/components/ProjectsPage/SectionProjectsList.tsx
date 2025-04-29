@@ -36,7 +36,7 @@ const SectionProjectsList = () => {
   return (
     <section className="mb-24 mt-10 flex flex-col gap-4 px-5 text-white md:mb-40 md:mt-20 md:gap-10 lg:gap-17 lg:px-10">
       {data &&
-        data?.concat(data.slice(0, 2))?.map((project, i) => (
+        data?.map((project, i) => (
           <div
             className="flex flex-col gap-6 md:grid md:grid-cols-12 md:gap-5"
             key={project.id}
