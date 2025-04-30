@@ -155,3 +155,11 @@ export const contactsPageLineAnimation = {
   transition: { duration: 0.75, ease: "easeInOut" },
   viewport: { once: true },
 };
+
+//NOT FOUND PAGE COMPONENTS APPEARANCE
+export const notFoundPageAppearance = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 1, ease: "easeInOut" },
+  viewport: { once: true },
+};
