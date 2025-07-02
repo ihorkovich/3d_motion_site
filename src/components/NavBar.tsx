@@ -2,6 +2,7 @@ import "../styles/animations.css";
 import { Link, NavLink } from "react-router-dom";
 import { pageConfig } from "../config/page.config";
 import { useMenu } from "../contexts/mobileMenuContext";
+import logo from "/logo/them_logo.png";
 
 const NavBar = () => {
   const { toggleMenu } = useMenu();
@@ -13,13 +14,16 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed z-50 h-navbar_mob w-full px-5 lg:h-navbar_desk lg:px-10">
-      <div className="flex h-full w-full items-center justify-between font-host text-base">
-        <Link to={pageConfig.home} className="font-gothic">
-          THEM
+    <nav className="fixed z-50 h-navbar_mob w-full max-w-[1440px] px-5 lg:h-navbar_desk lg:px-10">
+      <div className="relative h-full w-full font-host text-base">
+        <Link
+          to={pageConfig.home}
+          className="laft-0 absolute top-1/2 -translate-y-1/2 font-gothic"
+        >
+          <img src={logo} alt="THEM" className="w-14" />
         </Link>
 
-        <ul className="hidden md:flex md:items-center md:justify-between md:gap-4">
+        <ul className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:flex md:items-center md:justify-between md:gap-4">
           {navItems.map(({ label, path }) => (
             <li key={label}>
               <NavLink
@@ -36,13 +40,13 @@ const NavBar = () => {
           ))}
         </ul>
 
-        <div className="text-yellow md:hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 text-yellow md:hidden">
           <button aria-label="Open menu" onClick={toggleMenu}>
             MENU
           </button>
         </div>
 
-        <div className="hidden text-base duration-300 hover:cursor-pointer hover:text-yellow md:block">
+        <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 text-base duration-300 hover:cursor-pointer hover:text-yellow md:block">
           <a
             href={import.meta.env.VITE_THEM_EMAIL_LINK}
             target="_blank"

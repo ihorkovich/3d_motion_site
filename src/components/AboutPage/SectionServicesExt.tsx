@@ -8,7 +8,7 @@ const SectionMobileServices = () => {
   const services: string[] = [
     "Short Films",
     "Product Design",
-    "Explainer Videos",
+    "3D Graphics",
     "Branding Videos",
     "Music Videos",
   ];
@@ -31,7 +31,7 @@ const SectionMobileServices = () => {
       <div className="hidden sm:flex sm:w-1/2 sm:items-end sm:justify-start">
         <div className="aspect-square sm:max-w-[260px] md:max-w-[340px] lg:max-w-[410px] xl:max-w-[430px]">
           <img
-            src="/images/4.png"
+            src="/images/about_services.png"
             alt="Services"
             className="h-full w-full object-cover"
           />

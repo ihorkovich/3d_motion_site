@@ -24,3 +24,29 @@
 .selected-nav-link::after {
   transform: translate3d(0, 0, 0);
 }
+
+.mobile-nav-link {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.mobile-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: black;
+  opacity: 1;
+  transition:
+    opacity 300ms,
+    transform 300ms;
+  transform: translate3d(-101%, 0, 0);
+}
+
+.mobile-nav-link:hover::after,
+.mobile-selected-nav-link::after {
+  transform: translate3d(0, 0, 0);
+}

@@ -4,9 +4,9 @@ const HeaderSubtitle = () => {
       <h2 className="text-nowrap text-center leading-5.5 xsm:text-xl xsm:leading-6 sm:text-2xl md:text-3xl lg:text-wrap lg:text-4xl lg:leading-12">
         THAT’S HOW EXCELLENCE MAKES
       </h2>
-      <div className="flex flex-col items-center gap-2 leading-3 md:leading-4">
+      <div className="flex flex-col items-center gap-2 uppercase leading-3 md:leading-4">
         <div className="flex items-center justify-between gap-2 text-2xs xsm:gap-5 sm:gap-6 md:gap-9 md:text-xs lg:gap-10">
-          <p>EXPLAINER VIDEOS</p>
+          <p>3D GRAPHICS</p>
           <p>BRANDING VIDEOS</p>
           <p>SHORT FILMS</p>
         </div>

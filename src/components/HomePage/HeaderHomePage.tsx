@@ -7,9 +7,11 @@ const HeaderHomePage = () => {
   return (
     <header className="relative z-0 mx-auto min-h-screen w-full">
       <HeaderBackgroundVideo />
-      <NavBar />
-      <HeaderLogo />
-      <HeaderSubtitle />
+      <div className="mx-auto max-w-[1440px]">
+        <NavBar />
+        <HeaderLogo />
+        <HeaderSubtitle />
+      </div>
     </header>
   );
 };

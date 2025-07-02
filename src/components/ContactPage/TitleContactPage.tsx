@@ -32,8 +32,26 @@ const TitleContactPage = () => {
         {...contactsPageAnimation}
         className="flex flex-col gap-2 text-sm"
       >
-        <li>{import.meta.env.VITE_THEM_MOBILEPHONE_1}</li>
-        <li>{import.meta.env.VITE_THEM_MOBILEPHONE_2}</li>
+        {/* <li>{import.meta.env.VITE_THEM_MOBILEPHONE_1}</li>
+        <li>{import.meta.env.VITE_THEM_MOBILEPHONE_2}</li> */}
+        <li>
+          <a
+            href={`${import.meta.env.VITE_THEM_BEHANCE}`}
+            target="_blank"
+            aria-label="Visit our BEHANCE"
+          >
+            BEHANCE
+          </a>
+        </li>
+        <li>
+          <a
+            href={`${import.meta.env.VITE_THEM_INSTAGRAM}`}
+            target="_blank"
+            aria-label="Visit our INSTAGRAM"
+          >
+            INSTAGRAM
+          </a>
+        </li>
         <li className="text-sm">
           <a
             href={`${import.meta.env.VITE_THEM_TELEGRAM}`}

@@ -1,38 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
-
-import { pageConfig } from "../config/page.config";
-
+import RootLayout from "../layouts/RootLayout";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import ProjectsPage from "../pages/ProjectsPage";
 import ContactsPage from "../pages/ContactsPage";
-import ProjectDetailsPage from "../pages/ProjectDetailsPage";
+import SpecificProjectPage from "../pages/SpecificProjectPage";
 import NotFoundPage from "../pages/NotFoundPage";
 
 const router = createBrowserRouter([
   {
-    path: pageConfig.home,
-    element: <HomePage />,
-  },
-  {
-    path: pageConfig.about,
-    element: <AboutPage />,
-  },
-  {
-    path: pageConfig.projects,
-    element: <ProjectsPage />,
-  },
-  {
-    path: pageConfig.contacts,
-    element: <ContactsPage />,
-  },
-  {
-    path: `${pageConfig.project}/:projectId`,
-    element: <ProjectDetailsPage />,
-  },
-  {
-    path: pageConfig.notFound,
-    element: <NotFoundPage />,
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "about", element: <AboutPage /> },
+      { path: "projects", element: <ProjectsPage /> },
+      { path: "contacts", element: <ContactsPage /> },
+      { path: "projects/:projectId", element: <SpecificProjectPage /> },
+      { path: "*", element: <NotFoundPage /> },
+    ],
   },
 ]);
 

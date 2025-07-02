@@ -54,7 +54,7 @@ export const menuVariants = {
   },
   closed: {
     x: "100%",
-    transition: { duration: 0.3, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -134,7 +134,7 @@ export const sectionTitleLineAnimation = {
 
 //PAGE TITLE ANIMATION
 export const pageTitleAnimation = {
-  initial: { y: 75, opacity: 0 },
+  initial: { y: 50, opacity: 0 },
   whileInView: { y: 0, opacity: 1 },
   transition: { duration: 1, ease: "easeInOut" },
   viewport: { once: true, amount: 0.35 },
@@ -162,4 +162,12 @@ export const notFoundPageAppearance = {
   whileInView: { opacity: 1 },
   transition: { duration: 1, ease: "easeInOut" },
   viewport: { once: true },
+};
+
+//PAGE PROJECT ANIMATION
+export const projectPageAnimation = {
+  initial: { y: 55, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { duration: 0.75, ease: "easeInOut" },
+  viewport: { once: true, amount: 0.35 },
 };

@@ -7,10 +7,12 @@ import SectionAdditionalInfo from "../components/AboutPage/SectionAdditionalInfo
 const AboutPage = () => {
   return (
     <>
-      <HeaderAboutPage />
-      <SectionServices />
-      <SectionAdditionalInfo />
-      <Footer />
+      <div className="mx-auto max-w-[1440px]">
+        <HeaderAboutPage />
+        <SectionServices />
+        <SectionAdditionalInfo />
+        <Footer />
+      </div>
       <NavBarMobileMenu />
     </>
   );

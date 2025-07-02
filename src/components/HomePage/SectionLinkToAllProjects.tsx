@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { pageConfig } from "../../config/page.config";
 import { motion } from "framer-motion";
 import { sectionLinkToAllProjectsAnimation } from "../../lib/animations";
+
 const SectionLinkToAllProjects = () => {
   return (
     <motion.section

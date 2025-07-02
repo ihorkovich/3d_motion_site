@@ -3,7 +3,7 @@ import PageTitle from "../PageTitle";
 
 const HeaderProjectsPage = () => {
   return (
-    <header>
+    <header className="mx-auto max-w-[1440px]">
       <NavBar />
       <PageTitle title="Projects" subtitle="Our projects" />
     </header>

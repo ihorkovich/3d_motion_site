@@ -4,7 +4,9 @@ import NavBarMobileMenu from "../components/NavBar/NavBarMobileMenu";
 const ContactsPage = () => {
   return (
     <>
-      <ContactPage />
+      <div className="mx-auto max-w-[1440px]">
+        <ContactPage />
+      </div>
 
       <NavBarMobileMenu />
     </>

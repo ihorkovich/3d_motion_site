@@ -9,10 +9,12 @@ const HomePage = () => {
   return (
     <>
       <HeaderHomePage />
-      <SectionDescription />
-      <SectionProjectsList />
-      <SectionLinkToAllProjects />
-      <Footer />
+      <div className="mx-auto max-w-[1440px]">
+        <SectionDescription />
+        <SectionProjectsList />
+        <SectionLinkToAllProjects />
+        <Footer />
+      </div>
 
       <NavBarMobileMenu />
     </>

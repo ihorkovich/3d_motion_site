@@ -3,7 +3,6 @@ class PageConfig {
   about = "/about";
   projects = "/projects";
   contacts = "/contacts";
-  project = "/project";
   notFound = "*";
 }
 
